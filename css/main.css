@@ -201,7 +201,7 @@ a:hover {
     z-index: 15;
 }
 
-.game-control {
+.game-control, .game-control.none {
     width: 2.5rem;
     height: 2.5rem;
     position: fixed;
