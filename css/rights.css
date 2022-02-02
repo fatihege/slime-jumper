@@ -1,0 +1,32 @@
+.sky .right {
+    z-index: 5;
+    background-image: url("../img/heart.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.sky .right.hide {
+    animation: matterHiding 0.3s ease-out;
+    opacity: 0;
+}
+
+.sky .right-1 {
+    width: 7rem;
+    height: 7rem;
+    background-size: 4.5rem auto;
+    background-color: #ff1616;
+    border: 1rem solid #ea0000;
+    border-top-color: #ff1f1f;
+    border-right-color: #f50000;
+    position: absolute;
+    bottom: 2rem;
+    right: -11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff1616;
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding-bottom: 4px;
+}
+

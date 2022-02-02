@@ -1,0 +1,44 @@
+.sky .food {
+    z-index: 3;
+}
+
+.sky .food.hide {
+    animation: matterHiding 0.3s ease-out;
+    opacity: 0;
+}
+
+.sky .food-1 {
+    width: 6rem;
+    height: 6rem;
+    background-color: #ff9a16;
+    border: 1rem solid #ea8600;
+    border-top-color: #ff9e1f;
+    border-right-color: #f58b00;
+    position: absolute;
+    bottom: 2rem;
+    right: -11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.sky .food-2 {
+    width: 7rem;
+    height: 7rem;
+    background-color: #ff9a16;
+    border: 1rem solid #ea8600;
+    border-top-color: #ff9e1f;
+    border-right-color: #f58b00;
+    position: absolute;
+    bottom: 2rem;
+    right: -11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+}

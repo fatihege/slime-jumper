@@ -1,0 +1,165 @@
+@keyframes alertCurtainRed {
+    0%, 30% {
+        background-color: rgba(255, 25, 25, 0.7);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes sun {
+    0%, 49%, 100%  {
+        top: 5rem;
+    }
+
+    50%, 99% {
+        top: -30rem;
+    }
+}
+
+@keyframes moon {
+    0%, 49%, 100%  {
+        top: -30rem;
+    }
+
+    50%, 99% {
+        top: 5rem;
+    }
+}
+
+@keyframes dayCycle {
+    0%, 49%, 100%  {
+        background-color: #baf5ff;
+    }
+
+    50%, 99% {
+        background-color: #2b2d3a;
+    }
+}
+
+@keyframes textColorForTime {
+    0%, 49%, 100%  {
+        color: #212121;
+    }
+
+    50%, 99% {
+        color: #ffffff;
+    }
+}
+
+@keyframes imageColorForTime {
+    0%, 49%, 100%  {
+        filter: invert(0);
+    }
+
+    50%, 99% {
+        filter: invert(1);
+    }
+}
+
+@keyframes nightCurtain {
+    0%, 49%, 100%  {
+        background-color: transparent;
+    }
+
+    50%, 99% {
+        background-color: rgba(43, 45, 58, 0.51);
+    }
+}
+
+@keyframes hungerBarAlert {
+    0%, 50% {
+        background-color: #ff1f1f;
+        box-shadow: inset 0 0 0 0.8rem #dc0000;
+    }
+    100% {
+        background-color: #4f4f4f;
+        box-shadow: inset 0 0 0 0.8rem #343434;
+    }
+}
+
+@keyframes matterHiding {
+    from {
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+        filter: blur(10px);
+    }
+}
+
+@keyframes pebbles {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -150% 0;
+    }
+}
+
+@keyframes slimeEye {
+    0%, 45%, 55%, 100% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0.2);
+    }
+}
+
+@keyframes bigEnemy {
+    0%, 35%, 65%, 100% {
+        background-color: #131313;
+        box-shadow: inset 0 0 0 1.5rem #343434;
+    }
+
+    50% {
+        background-color: #ff2323;
+        box-shadow: inset 0 0 0 1.5rem #e50000;
+    }
+}
+
+@keyframes bigEnemyEye {
+    0%, 35%, 65%, 100% {
+        background-color: #3b3b3b;
+    }
+
+    50% {
+        background-color: #e30000;
+    }
+}
+
+@keyframes bigEnemyThornsTop {
+    0%, 35%, 65%, 100% {
+        border-bottom-color: #212121;
+    }
+
+    50% {
+        border-bottom-color: #d70000;
+    }
+}
+
+@keyframes bigEnemyThornsLeft {
+    0%, 35%, 65%, 100% {
+        border-right-color: #212121;
+    }
+
+    50% {
+        border-right-color: #d70000;
+    }
+}
+
+@keyframes bigEnemyThornsRight {
+    0%, 35%, 65%, 100% {
+        border-left-color: #212121;
+    }
+
+    50% {
+        border-left-color: #d70000;
+    }
+}

@@ -1,0 +1,184 @@
+.sky .enemy {
+    z-index: 4;
+    position: absolute;
+    bottom: 0;
+    right: -11rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sky .enemy.hide {
+    animation: matterHiding 0.3s ease-out;
+    opacity: 0;
+}
+
+.sky .enemy .face {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.sky .enemy .face .eye {
+    height: 12px;
+    width: 12px;
+    position: relative;
+    left: 2.5rem;
+    animation: slimeEye 2.6s infinite ease-out;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sky .enemy-1 {
+    width: 10rem;
+    height: 10rem;
+    background-color: #3d3d3d;
+    box-shadow: inset 0 0 0 1rem #1c1c1c;
+}
+
+.sky .enemy-1 .face .eyebrow {
+    height: 4px;
+    width: 14px;
+    background-color: #0c0c0c;
+    position: relative;
+    left: 2.3rem;
+    bottom: 4px;
+    transform: rotate(-10deg);
+}
+
+.sky .enemy .face .eye {
+    background-color: #0c0c0c;
+}
+
+.sky .enemy-1 .face .eye .white {
+    height: 8px;
+    width: calc(50% - 2px);
+    background-color: #e7e7e7;
+    position: relative;
+    right: 2px;
+}
+
+.sky .enemy-1 .face .mouth {
+    height: 1.5rem;
+    width: 3rem;
+    background-color: #e7e7e7;
+    border: 2px solid #0e0e0e;
+    border-left: none;
+    position: relative;
+    left: 1rem;
+    top: 4px;
+}
+
+.sky .enemy-2 {
+    width: 9rem;
+    height: 9rem;
+    background-color: #ff2929;
+    box-shadow: inset 0 0 0 1rem #ff0d0d;
+    outline: 1rem solid rgba(255, 13, 13, 0.5);
+}
+
+.sky .enemy-2 .face .eye {
+    background-color: #b90000;
+    left: 2rem;
+}
+
+.sky .enemy-3 {
+    right: -22rem;
+    width: 16rem;
+    height: 16rem;
+    background-color: #131313;
+    box-shadow: inset 0 0 0 1.5rem #343434;
+    animation: bigEnemy 2.6s infinite ease-out;
+}
+
+.sky .enemy-3 .thorn {
+    position: absolute;
+}
+
+.sky .enemy-3 .thorn span {
+    border: 2rem solid transparent;
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    animation: 2.6s infinite ease-out;
+}
+
+.sky .enemy-3 .thorn.thorn-top {
+    width: 100%;
+    height: 5rem;
+    top: -5rem;
+}
+
+.sky .enemy-3 .thorn.thorn-top span {
+    animation-name: bigEnemyThornsTop;
+}
+
+.sky .enemy-3 .thorn.thorn-top span:first-child {
+    border-bottom: #212121 solid 5rem;
+    top: -2rem;
+    left: 2.6rem;
+}
+
+.sky .enemy-3 .thorn.thorn-top span:last-child {
+    border-bottom: #212121 solid 5rem;
+    top: -2rem;
+    right: 3rem;
+}
+
+.sky .enemy-3 .thorn.thorn-left {
+    height: 100%;
+    width: 5rem;
+    left: -5rem;
+}
+
+.sky .enemy-3 .thorn.thorn-left span {
+    animation-name: bigEnemyThornsLeft;
+}
+
+.sky .enemy-3 .thorn.thorn-left span:first-child {
+    border-right: #212121 solid 5rem;
+    left: -2rem;
+    top: 2.6rem;
+}
+
+.sky .enemy-3 .thorn.thorn-left span:last-child {
+    border-right: #212121 solid 5rem;
+    left: -2rem;
+    bottom: 3rem;
+}
+
+.sky .enemy-3 .thorn.thorn-right {
+    height: 100%;
+    width: 5rem;
+    right: -5rem;
+}
+
+.sky .enemy-3 .thorn.thorn-right span {
+    animation-name: bigEnemyThornsRight;
+}
+
+.sky .enemy-3 .thorn.thorn-right span:first-child {
+    border-left: #212121 solid 5rem;
+    right: -2rem;
+    top: 2.6rem;
+}
+
+.sky .enemy-3 .thorn.thorn-right span:last-child {
+    border-left: #212121 solid 5rem;
+    right: -2rem;
+    bottom: 3rem;
+}
+
+.sky .enemy-3 .face .eye {
+    animation-name: bigEnemyEye;
+    background-color: #3b3b3b;
+    left: 2.5rem;
+    width: 16px;
+    height: 6px;
+    transform: skewY(-8deg);
+}

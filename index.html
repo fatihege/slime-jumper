@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/svg">
+    <title>Slime Jumper</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="alert-curtain"></div>
+<div class="night-curtain"></div>
+<div class="container">
+    <div class="modals">
+        <div class="modal start-modal show">
+            <h1 class="modal-title">Slime Jumper</h1>
+            <p class="modal-description">Click the "Play" button or press "Enter" on your keyboard</p>
+            <div class="modal-btn-container">
+                <button class="modal-btn modal-btn-primary">Play</button>
+            </div>
+            <p class="modal-note">You want to get information about the game?
+                <a href="./help.html" target="_blank">Get help.</a></p>
+        </div>
+        <div class="modal replay-modal">
+            <h1 class="modal-title">Game Over</h1>
+            <p class="modal-description">If you want to play again then click the "Replay" button<br>or press "F5" on your keyboard</p>
+            <div class="modal-btn-container">
+                <button class="modal-btn modal-btn-primary">Replay</button>
+            </div>
+            <p class="modal-note">You want to get information about the game?
+                <a href="./help.html" target="_blank">Get help.</a></p>
+        </div>
+        <div class="modal modal-full screen-size-modal">
+            <h1 class="modal-title">Small Screen Size</h1>
+            <p class="modal-description">Your screen size is too small to play this game.</p>
+            <p class="modal-note">You want to get information about the game?
+                <a href="./help.html" target="_blank">Get help.</a></p>
+        </div>
+    </div>
+    <div class="info">
+        <div class="rights">
+            <div class="right">
+                <div class="fill">
+                    <img src="./img/heart.svg">
+                </div>
+            </div>
+            <div class="right">
+                <div class="fill">
+                    <img src="./img/heart.svg">
+                </div>
+            </div>
+            <div class="right">
+                <div class="fill">
+                    <img src="./img/heart.svg">
+                </div>
+            </div>
+        </div>
+        <div class="score">
+            Score: <span class="score-text">0</span>
+            <br>
+            High: <span class="high-score">0</span>
+        </div>
+        <div class="hunger">
+            <img src="./img/hamburger.svg">
+            <div class="hunger-bar">
+                <div class="fill">100%</div>
+            </div>
+            <span class="percent">100%</span>
+        </div>
+        <div class="game-control pause none"></div>
+    </div>
+    <div class="sky">
+        <div class="celestial-bodies">
+            <div class="sun"></div>
+            <div class="moon"></div>
+        </div>
+        <div class="slime">
+            <div class="face">
+                <div class="eye"></div>
+            </div>
+        </div>
+    </div>
+    <div class="floor">
+        <div class="grass"></div>
+        <div class="dirt">
+            <div class="pebbles"></div>
+        </div>
+    </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

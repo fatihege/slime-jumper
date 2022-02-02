@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Fira Code", "Noto Sans Mono CJK SC", monospace;
+    color: #111111;
+}
+
+::selection {
+    background-color: rgba(7, 131, 255, 0.4);
+    color: #111111;
+}
+
+::-moz-selection {
+    background-color: rgba(7, 131, 255, 0.4);
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    overflow: auto;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #efefef;
+}
+
+.container-wrapper {
+    width: 100%;
+    max-width: 1250px;
+}
+
+section {
+    padding: 0.6rem 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2.6rem;
+    font-weight: 900;
+    line-height: 2;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+table {
+    border: 0.4rem solid #d9d9d9;
+    font-size: 1rem;
+    margin: 1rem 0;
+    border-collapse: collapse;
+}
+
+table tr th {
+    font-weight: 700;
+}
+
+table tr td {
+    font-weight: 400;
+}
+
+table tr th, table tr td {
+    padding: 0.3rem 1rem;
+    border: 2px solid #d9d9d9;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table tr td img {
+    border: 0.3rem solid #d9d9d9;
+    padding: 0.3rem;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 90vh;
+    margin: 0.5rem 0;
+}
+
+img {
+    border: 0.3rem solid #008bff;
+    padding: 0.3rem;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 90vh;
+    margin: 0.5rem 0;
+}
+
+a {
+    color: #007be0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #0065b7;
+}
+
+strong {
+    font-weight: 700;
+}
+
+small {
+    font-size: 0.8rem;
+    line-height: 1.3;
+}
+
+.copyright {
+    border-top: 1px solid #cecece;
+    padding-top: 1rem;
+    color: #444444;
+}

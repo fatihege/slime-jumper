@@ -1,0 +1,94 @@
+.modals {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 25;
+    text-align: center;
+}
+
+.modals .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: max-content;
+    min-width: 60vw;
+    max-width: 100vw;
+    height: max-content;
+    min-height: 40vh;
+    max-height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    background: #f1f1f1;
+    border: 1rem solid #cccccc;
+    border-top-color: #e1e1e1;
+    border-left-color: #bdbdbd;
+    padding: 2rem 3rem;
+}
+
+.modals .modal.modal-full {
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+}
+
+.modals .modal.show {
+    display: flex;
+}
+
+.modals .modal .modal-title {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 2;
+}
+
+.modals .modal .modal-description {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+.modals .modal .modal-note {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-top: 1rem;
+}
+
+.modals .modal .modal-btn-container {
+    width: auto;
+}
+
+.modals .modal .modal-btn-container:hover {
+    padding-top: 0.8rem;
+}
+
+.modals .modal .modal-btn-container .modal-btn {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    padding: 0.7rem 3rem;
+    cursor: pointer;
+    border: none;
+}
+
+.modals .modal .modal-btn-container .modal-btn.modal-btn-primary {
+    box-shadow: inset 0 0 0 0.8rem #0068d0;
+    background-color: #2282ff;
+    color: #ffffff;
+    border-bottom: 0.8rem solid #004588;
+}
+
+.modals .modal .modal-btn-container:hover .modal-btn.modal-btn-primary {
+    /*margin-top: 2.8rem;*/
+    border-bottom: 0 solid #004588;
+}

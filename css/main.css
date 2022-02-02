@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import "animations.css";
+@import "modals.css";
+@import "enemies.css";
+@import "foods.css";
+@import "rights.css";
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    user-select: none;
+    font-family: "Fira Code", "Noto Sans Mono CJK SC", monospace;
+}
+
+html, body {
+    font-size: 8px;
+}
+
+a {
+    color: #007be0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #0065b7;
+}
+
+.none {
+    display: none;
+    visibility: hidden;
+    animation: none;
+}
+
+.alert-curtain {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    position: fixed;
+    z-index: 20;
+    display: none;
+}
+
+.alert-curtain.flash {
+    display: block;
+    animation: alertCurtainRed 0.3s ease-out;
+}
+
+.night-curtain {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    position: fixed;
+    z-index: 9;
+    animation: nightCurtain 45s linear infinite;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.info {
+    z-index: 30;
+    position: fixed;
+    top: 3rem;
+    left: 3rem;
+    right: 3rem;
+}
+
+.rights {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rights .right {
+    height: calc(4rem + 0.8rem);
+    width: 4rem;
+    background-color: #bd0000;
+    margin-right: 6px;
+    top: 0;
+    position: relative;
+    transition: 0.15s linear;
+    transition-property: top, background-color;
+}
+
+.rights .right .fill {
+    height: 4rem;
+    width: 4rem;
+    background-color: #ff2c2c;
+    border: 0.6rem solid #ee0000;
+    position: relative;
+    top: 0;
+    transition: 0.15s linear;
+    transition-property: top, border-color, background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.rights .right .fill img {
+    max-width: 90%;
+    transition: filter 0.15s linear;
+}
+
+.rights .right.out {
+    background-color: #626262;
+}
+
+.rights .right.out .fill {
+    background-color: #646464;
+    border-color: #424242;
+    top: 0.8rem;
+}
+
+.rights .right.out .fill img {
+    filter: invert(0.75);
+}
+
+.score {
+    position: fixed;
+    left: 3rem;
+    top: 10rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #212121;
+    animation: textColorForTime 45s linear infinite;
+}
+
+.score span {
+    font-weight: 800;
+}
+
+.hunger {
+    float: right;
+    width: 32rem;
+    height: 4rem;
+    background-color: #4f4f4f;
+    box-shadow: inset 0 0 0 0.8rem #343434;
+    position: relative;
+    top: 0.8rem;
+}
+
+.hunger.alert {
+    animation: hungerBarAlert 1s linear infinite;
+}
+
+.hunger.game-over {
+    background-color: #ff1f1f;
+    box-shadow: inset 0 0 0 0.8rem #dc0000;
+}
+
+.hunger img {
+    position: absolute;
+    width: auto;
+    height: 4rem;
+    top: 0;
+    left: -5rem;
+}
+
+.hunger .percent {
+    position: absolute;
+    top: 0.5rem;
+    width: 100%;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.hunger .hunger-bar {
+    position: relative;
+    top: -0.8rem;
+    width: 100%;
+    height: calc(4rem + 0.8rem);
+    background-color: #b76100;
+}
+
+.hunger .hunger-bar .fill {
+    position: absolute;
+    width: 100%;
+    height: 4rem;
+    background-color: #ff9114;
+    box-shadow: inset 0 0 0 0.8rem #e17900;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    z-index: 15;
+}
+
+.game-control {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: fixed;
+    top: 10rem;
+    right: 3rem;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 2.5rem 2.5rem;
+    animation: imageColorForTime 45s linear infinite;
+}
+
+.game-control.pause {
+    background-image: url("../img/pause.svg");
+}
+
+.game-control.resume {
+    background-image: url("../img/resume.svg");
+}
+
+.sky {
+    width: 100%;
+    height: calc(100vh - 16rem);
+    position: relative;
+    animation: dayCycle 45s linear infinite;
+}
+
+.sky .sun {
+    width: 12rem;
+    height: 12rem;
+    background-color: #ffe11a;
+    border: 1rem solid #e1bb00;
+    position: absolute;
+    top: 5rem;
+    right: 40rem;
+    animation: sun 45s linear infinite;
+    box-shadow: 0 0 50px 50px rgba(255, 222, 2, 0.47);
+    z-index: 1;
+}
+
+.sky .moon {
+    width: 12rem;
+    height: 12rem;
+    background-color: #afc8d7;
+    border: 1rem solid #718793;
+    position: absolute;
+    top: -24rem;
+    right: 40rem;
+    animation: moon 45s linear infinite;
+    box-shadow: 0 0 50px 50px rgba(175, 200, 215, 0.47);
+    z-index: 1;
+}
+
+.floor {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.floor .grass {
+    width: 100%;
+    height: 4rem;
+    background-color: #13ff47;
+    border: 6px solid #00d231;
+    border-top-color: #41ff6d;
+    border-right-color: #00be29;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.floor .dirt {
+    width: 100%;
+    height: 12rem;
+    background-color: #774b41;
+    border: 6px solid #643a31;
+    border-top-color: #805a4f;
+    border-right-color: #572f25;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floor .dirt .pebbles {
+    width: 100%;
+    height: 10rem;
+    background-image: url("../img/pebbles.svg");
+    background-size: auto 90%;
+    background-position: 0 0;
+    opacity: 0.6;
+}
+
+.floor .dirt .pebbles.start {
+    animation: pebbles 10s linear infinite;
+}
+
+.sky .slime {
+    z-index: 5;
+    width: 11rem;
+    height: 11rem;
+    background-color: #2d95ff;
+    box-shadow: inset 0 0 0 1rem #0066cc;
+    position: absolute;
+    bottom: 0;
+    left: 32rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    transition-property: height, transform;
+}
+
+.sky .slime .face {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.sky .slime .face .eye {
+    height: 12px;
+    width: 12px;
+    background-color: #00162f;
+    position: relative;
+    right: 1.5rem;
+    animation: slimeEye 2s infinite ease-out;
+}
+
+.sky .slime.going-back, .sky .slime.going-back .face {
+    justify-content: flex-start;
+}
+
+.sky .slime.going-back .face .eye {
+    right: auto;
+    left: calc(1rem + 2px);
+}
+
+.sky .slime.short {
+    transition-duration: 0.1s;
+    height: calc(11rem / 1.7);
+}
+
+.sky .slime.jump {
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+    transform: translateY(-20rem);
+}
+
+.sky .slime.double-jump {
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+    transform: translateY(-28rem);
+}
