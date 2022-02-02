@@ -101,7 +101,7 @@ class Slime {
     }
 
     #gameOver() {
-        gameControlBtn.classList.add('none');
+        gameControlBtn.classList.add('hidden');
         this.gameOver = true;
         this.#flashAlertCurtain();
         this.#updateHungerBar(1);
@@ -805,7 +805,7 @@ class Right {
 const startGame = () => {
     gameStarted = true;
     startModal.classList.remove('show');
-    gameControlBtn.classList.remove('none');
+    gameControlBtn.classList.remove('hidden');
 
     const slime = new Slime('.container .sky .slime', velocity, 200, 3, 100, 600);
 
@@ -906,7 +906,7 @@ const pauseGame = () => {
     if (!gameStarted) false;
     paused = !paused;
     if (paused) {
-        gameControlBtn.classList.remove('none');
+        gameControlBtn.classList.remove('hidden');
         gameControlBtn.classList.remove('pause');
         gameControlBtn.classList.add('resume');
     } else {
