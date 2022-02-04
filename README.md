@@ -23,4 +23,4 @@ enemies that come your way.
 I am not a game developer, so there may be bugs or technical errors in the codes in the game. If you encounter a bug,
 create a new issue and if you find a technical error in the codes, email me. (ifatxh@gmail.com)
 
-###### &copy; Fatih EGE | Made with ❤️ and 🍵
+###### &copy; Fatih EGE | Made with ❤️ and ☕
